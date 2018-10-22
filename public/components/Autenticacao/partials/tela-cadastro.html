@@ -1,0 +1,72 @@
+<div ng-controller="cadastroController">
+    <div id="menu">
+    </div>
+
+    <div class="row green lighten-2" style="width:100%;margin-top:30px;">
+        <div class="container" >   
+            <div class="section" > 
+                <div  class="row" style="margin:0;" >
+                    <div class="col s12">
+                        <div class="col s12 m12 l2 center">
+                            <i class="fa fa-user-circle " style="font-size:100px; color: #f4f8f9; margin-top:10px;" aria-hidden="true"></i>
+                        </div>
+                        <!-- <div classs="col s12 center"><h1 style="color: #f4f8f9;">Trocar Senha</h1></div> -->
+                        <div class="col s12 m12 l10 center"><h1 id="titleHead" style="color: #f4f8f9; ">Cadastrar</h1></div>
+                        
+                    </div>
+                </div>    
+            </div>
+        </div>        
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6" >
+                <div class="section">
+                    <form  class="col s12 card-panel hoverable" name="frmCadastro" style="margin-top:40px;background:#ffffff; padding:20px 40px 40px 40px;">
+                        <div class="input-field col s12">
+                            <h5>Cadastre-se e aprenda melhor.</h5>
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="txtName">Nome completo</label>
+                            <input id="txtName" type="text" name="nome" ng-model="dados.name" class="validate" required>
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="txtNickname">Nome de usuário</label>
+                            <input id="txtNickname" type="text" name="usuario" ng-model="dados.nickname" class="validate" required>
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="txtBirth">Data de nascimento</label>
+                            <input id="txtBirth" type="text" name="nascimento" ng-model="dados.birth" mask="39/19/2999" restrict="reject" class="validate" required>
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="txtEmail">E-mail de contato</label>
+                            <input id="txtEmail" type="email" name="email" ng-model="dados.email" class="validate" required>
+                        </div>
+                        <div class="col s12" style="margin-top: 20px;">
+                            <button class="waves-effect waves-light btn  green darken-2" type="button" ng-click="submit()" >CADASTRAR</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="col s12 offset-m2 m4"  >
+                <div class="section" >
+                    <div class="col s12 card-panel hoverable" style="margin-top:40px;background:#ffffff;  padding:40px;">
+                        <div class="col s12 center">
+                            <h5>Possui cadastro?</h5>
+                        </div>
+                        <div class="col s12 center">
+                            <p>Entre e continue de onde você parou.</p>
+                        </div>
+                        <div class="col s12" style="text-align:center;">
+                            <a href="#!login" class="waves-effect waves-light btn indigo darken-2" type="button" >Entrar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
